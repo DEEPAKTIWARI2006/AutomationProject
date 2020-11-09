@@ -8,6 +8,8 @@ import static frameworkcore.frameworkutils.Messages.LAUNCHWEBSITE;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+
+import com.gmail.pagecollection.HomePage;
 import com.main.test.TestRunner;
 import frameworkcore.frameworkutils.GenericFunctions;
 import frameworkcore.webdriverfactory.DriverManager;
@@ -18,10 +20,12 @@ import io.cucumber.java.en.When;
 public class LoginPageValidationStepDefs extends TestRunner{
 
   WebDriver driver = null;
+  HomePage page;
 
   public LoginPageValidationStepDefs() {
 	this.driver = TestRunner.getDriver();
     driver = DriverManager.getDriver();
+    page = PageFactory.initElements(driver,HomePage.class);
   }
 
   @Given("Open ApplicationUrl")
@@ -46,7 +50,7 @@ public class LoginPageValidationStepDefs extends TestRunner{
   @When("^Login to Website with data \"([^\"]*)\"$")
   public void login_to_Website_with_data(String testDataID) {
 	  GenericFunctions.LogAndReportInfo("Logging in with credentials");
-    //homePage.Login(testDataID);
+	  page.Login(testDataID);
   }
   
   @Then("User should be logged in")

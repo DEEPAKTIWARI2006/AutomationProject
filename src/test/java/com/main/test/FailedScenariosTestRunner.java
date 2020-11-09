@@ -26,7 +26,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions
 (features = {"@target/rerun.txt"},
 glue = {"com.gluecode"}, 
-tags = {}, 
+//tags = {}, 
 strict = true, 
 monochrome = true,
 //dryRun = true,

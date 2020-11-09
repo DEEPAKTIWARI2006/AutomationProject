@@ -31,31 +31,31 @@ public class HomePage {
   // Elements on Login Page
 
   @FindBy(name = "username")
-  public static WebElement txtBoxuserName;
+  private static WebElement txtBoxuserName;
 
   @FindBy(name = "password")
-  public WebElement txtboxPassword;
+  private WebElement txtboxPassword;
 
   @FindBy(xpath = "//button[text()='Log In']")
-  public WebElement btnLogin;
+  private WebElement btnLogin;
 
   @FindBy(xpath = "//span[text()='Login / Register']")
-  public WebElement linkLogin;
+  private WebElement linkLogin;
 
   @FindBy(xpath = "//img[@alt='BMO Equity Logo']")
-  public WebElement imgBMOCapLogo;
+  private WebElement imgBMOCapLogo;
 
   @FindBy(xpath = "//button[text()='Forgot credentials?']")
-  public WebElement linkForgotPassword;
+  private WebElement linkForgotPassword;
 
   @FindBy(xpath = "//button[text()='Register for an account']")
-  public WebElement linkRegisterForAccount;
+  private WebElement linkRegisterForAccount;
 
   @FindBy(xpath = "//p[@class='error' and text()='Invalid userName/Password']")
-  public WebElement txtInvalidLoginMessage;
+  private WebElement txtInvalidLoginMessage;
 
   @FindBy(xpath = "//span[@class='name-label ']/span")
-  public WebElement lblLoginUser;
+  private WebElement lblLoginUser;
   
   String xpathLinkSignInMyAccount = "//a[text()='##PlaceHolder##']";
   String btnSignInLogOut = "//button[text()='##PlaceHolder##']";
@@ -64,7 +64,7 @@ public class HomePage {
   // Methods for Sign Page
 
 
-  public void VerifyLoginPageItems() {
+  private void VerifyLoginPageItems() {
     useractions.IsElementDisplayed(txtboxPassword);
     useractions.IsElementDisplayed(btnLogin);
     useractions.IsElementDisplayed(imgBMOCapLogo);

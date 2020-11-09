@@ -28,7 +28,6 @@ import io.cucumber.testng.CucumberOptions;
 {"classpath:Features"},
 glue = {"com.gluecode"}, 
 tags = {"@runthis"}, 
-strict = true, 
 monochrome = true,
 //dryRun = true,
 plugin = { "rerun:target/rerun.txt", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
