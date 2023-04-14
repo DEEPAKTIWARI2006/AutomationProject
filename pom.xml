@@ -9,7 +9,7 @@
 	<properties>
 		<core.framework.version>0.0.1-SNAPSHOT</core.framework.version>
 		<io.restassured.version>3.0.2</io.restassured.version>
-		<org.json.version>20180813</org.json.version>
+		<org.json.version>20230227</org.json.version>
 	</properties>
 
 	<dependencies>
